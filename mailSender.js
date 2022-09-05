@@ -66,7 +66,7 @@ async function mailSender(to, subject, cc=null, bcc=null, templateData, attachme
         from: (from ? from : process.env.MAIL_FROM_ADDRESS),
         to:to,
         subject:subject,
-        template:"historyMail",
+        template:"mail_template",
         context:{
             templateDataObject:templateDataObject
         }

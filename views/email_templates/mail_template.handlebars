@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ subjectLine }}</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		#didikicks_mail_body{
+			background-color: #9CDBF7;
+			padding: 0 5%;
+			box-sizing: border-box;
+		}
+
+		#didikicks_mail_body .contents-wrapper{
+			background-color: #fff;
+			padding: 0;
+			box-shadow: 0 4px 3px 0 rgb(0 0 0 / 8%);
+		}
+
+		#didikicks_mail_body .logo{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		#didikicks_mail_body .logo .logo-wrapper {
+		    max-width: 280px;
+		    max-height: 280px;
+		}
+		#didikicks_mail_body header,
+		#didikicks_mail_body main{
+			padding: 0 5%;
+		}
+
+
+		#didikicks_mail_body .logo .logo-wrapper img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+
+		#didikicks_mail_body .title-box h3{
+			font-weight: 800;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		#didikicks_mail_body .title-box p{
+			font-weight: 600;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+
+		#didikicks_mail_body footer{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			background-color: #F0EEEF;
+			padding: 4%;
+		}
+		#didikicks_mail_body footer .social-icons div{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#didikicks_mail_body footer .social-icons div img{
+			width: 40px;
+			height: 40px;
+		}
+
+
+		
+		#didikicks_mail_body .text-center{
+			text-align: center !important;
+		}
+		#didikicks_mail_body .para-margin-bttom{
+			margin-bottom: 1.5rem;
+		}
+		#didikicks_mail_body .f-bold{
+			font-weight: 700 !important;
+		}
+
+		#didikicks_mail_body .d-flex{
+			display: flex;
+		}
+		#didikicks_mail_body .d-flex.flex-wrap{
+			flex-wrap: wrap;
+		}
+		#didikicks_mail_body .d-flex.justify-content-center{
+			justify-content: center;
+		}
+		#didikicks_mail_body .d-flex.align-items-center{
+			align-items: center;
+		}
+
+		#didikicks_mail_body .btn{
+			width: 100%;
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+			color: #fff;
+			font-weight: 800;
+			text-align: center;
+			font-size: 1rem;
+			max-width: 150px;
+		}
+		#didikicks_mail_body .btn.btn-success{
+			background-color: #00AD3E;
+		}
+		#didikicks_mail_body .btn.btn-danger{
+			background-color: #dc3545;
+		}
+		#didikicks_mail_body .font-bold{
+			font-weight: 700;
+		}
+
+		#didikicks_mail_body .datatable_wrapper{
+			max-width: 100%;
+			overflow-x: auto;
+		}
+		#didikicks_mail_body .datatable{
+			width: 100%;
+		}
+
+		#didikicks_mail_body .datatable tr th,
+		#didikicks_mail_body .datatable tr td{
+			padding: 5px 10px;
+		}
+
+
+		@media screen and (max-width: 767px){
+			#didikicks_mail_body .logo .logo-wrapper{
+				max-width: 180px;
+			}
+			#didikicks_mail_body footer{
+				justify-content: center !important;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="didikicks_mail_body">
+		<div class="contents-wrapper">
+			<header>
+				<div class="logo">
+					<div class="logo-wrapper">
+						<img src="{{templateDataObject.app.appUrl}}/public/assets/images/logo.png" alt="app logo">
+					</div>
+				</div>
+
+				<div class="title-box">
+					<h3 style="margin: 15px 0">{{ templateDataObject.subject }}</h3>
+				</div>
+			</header>
+
+			<main class="contents">
+				<div class="datatable_wrapper">
+					<table class="datatable">
+						<thead>
+							<tr>
+								<th>Data1</th>
+								<th>Data2</th>
+								<th>Data3</th>
+								<th>Data4</th>
+								<th>Data5</th>
+								<th>Data6</th>
+								<th>Data7</th>
+								<th>Data8</th>
+								<th>Data9</th>
+								<th>Data10</th>
+								<th>Data11</th>
+								<th>Data12</th>
+								<th>Data13</th>
+								<th>Data14</th>
+								<th>Data15</th>
+								<th>Data16</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each templateDataObject.histories}}
+							<tr>
+								<td>
+									{{#compareStrings field "data1"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data2"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data3"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data4"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data5"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data6"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data7"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data8"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data9"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data10"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data11"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data12"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data13"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data14"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data15"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#compareStrings field "data16"}}
+										{{value}}
+									{{/compareStrings}}
+								</td>
+								<td>
+									{{#formatDate createdAt}}
+										{{createdAt}}
+									{{/formatDate}}
+								</td>
+							</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+			</main>
+
+			<footer style="margin-top: 4rem;">
+				<div style="margin-right: 1.5rem;">
+					<p>&copy; {{templateDataObject.year}} {{templateDataObject.app.name}}, All rights reserved.</p>
+				</div>
+				<div class="social-icons">
+					<div>
+						<a href="{{templateDataObject.app.socialUrls.facebook}}">
+							<img src="{{templateDataObject.app.appUrl}}/public/assets/images/icons/facebook.png">
+						</a>
+						<a href="{{templateDataObject.app.socialUrls.twitter}}">
+							<img src="{{templateDataObject.app.appUrl}}/public/assets/images/icons/twitter.png">
+						</a>
+						<a href="{{templateDataObject.app.socialUrls.instagram}}">
+							<img src="{{templateDataObject.app.appUrl}}/public/assets/images/icons/instagram.png">
+						</a>
+						<a href="{{templateDataObject.app.socialUrls.youtube}}">
+							<img src="{{templateDataObject.app.appUrl}}/public/assets/images/icons/youtube.png">
+						</a>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+	</div>
+</body>
+</html>
