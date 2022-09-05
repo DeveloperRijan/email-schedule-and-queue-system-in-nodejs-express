@@ -48,7 +48,7 @@ smtpTransporter.use('compile', hbs({
 // });
 
   //@templateData should be an object of users+histories
-async function historyMailSender(to, subject, cc=null, bcc=null, templateData, attachment=[], from=null){
+async function mailSender(to, subject, cc=null, bcc=null, templateData, attachment=[], from=null){
     let templateDataObject = null
     try {    
     templateDataObject = templateData
@@ -119,4 +119,4 @@ async function mailHistoryLogger(templateDataObject, exceptionError=null){
     }
 }
 
-module.exports = historyMailSender
+module.exports = mailSender
